@@ -10,6 +10,9 @@ build:
 test:
   go test -race ./...
 
+clean:
+  git clean -f .
+
 release-local:
   goreleaser release --snapshot --clean
 

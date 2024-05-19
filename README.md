@@ -8,6 +8,12 @@ This is nothing new, and can be achieved with many other tools such as Perl, Sed
 
 ## Install
 
+Using Homebrew:
+
+    brew install stuarthicks/brews/rextract
+
+Using Go:
+
     go install github.com/stuarthicks/rextract@latest
 
 ## Usage

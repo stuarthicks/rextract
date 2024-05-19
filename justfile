@@ -13,12 +13,8 @@ test:
 clean:
   git clean -f .
 
-release-local:
-  goreleaser release --snapshot --clean
-
-release-snapshot:
-  goreleaser release --snapshot
+snapshot:
+  goreleaser release --clean --snapshot
 
 release:
-  goreleaser release
-
+  goreleaser release --clean

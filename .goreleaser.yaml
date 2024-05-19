@@ -44,3 +44,19 @@ changelog:
     exclude:
       - "^docs:"
       - "^test:"
+
+brews:
+  -
+    name: rextract
+    homepage: "https://github.com/stuarthicks/rextract"
+    description: "Simple shell regex capture extractor"
+    license: "MIT"
+    test: |
+      system "#{bin}/rextract -h
+    tap:
+      owner: stuarthicks
+      name: homebrew-brews
+    directory: Formula
+    commit_author:
+      name: goreleaserbot
+      email: bot@goreleaser.com

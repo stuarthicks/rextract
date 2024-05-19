@@ -53,7 +53,7 @@ brews:
     license: "MIT"
     test: |
       system "#{bin}/rextract -h"
-    tap:
+    repository:
       owner: stuarthicks
       name: homebrew-brews
     directory: Formula

@@ -52,7 +52,7 @@ brews:
     description: "Simple shell regex capture extractor"
     license: "MIT"
     test: |
-      system "#{bin}/rextract -h
+      system "#{bin}/rextract -h"
     tap:
       owner: stuarthicks
       name: homebrew-brews

@@ -39,6 +39,11 @@ func main() {
 			os.Exit(1)
 		}
 
+		if len(m)-1 < i {
+			// group was not matched in the input, continue to next line
+			continue
+		}
+
 		fmt.Println(m[i])
 	}
 

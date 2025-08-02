@@ -9,7 +9,6 @@ import (
 )
 
 func main() {
-
 	var exp string
 	flag.StringVar(&exp, "e", ".", "A regular expression to match against stdin")
 
@@ -17,23 +16,23 @@ func main() {
 	flag.StringVar(&grp, "g", "", "Extract this named capture group instead of the first capture")
 	flag.Parse()
 
-	var p = regexp.MustCompile(exp)
+	p := regexp.MustCompile(exp)
 
-	var s = bufio.NewScanner(os.Stdin)
+	s := bufio.NewScanner(os.Stdin)
 
 	for s.Scan() {
-		var l = s.Text()
-		var m = p.FindStringSubmatch(l)
+		l := s.Text()
+		m := p.FindStringSubmatch(l)
 
 		if grp == "" {
-			if m == nil || len(m) < 2 {
+			if len(m) < 2 {
 				continue
 			}
 			fmt.Println(m[1])
 			continue
 		}
 
-		var i = p.SubexpIndex(grp)
+		i := p.SubexpIndex(grp)
 		if i < 0 {
 			fmt.Println("error: group '" + grp + "' is not defined in the expression")
 			os.Exit(1)
@@ -46,5 +45,4 @@ func main() {
 
 		fmt.Println(m[i])
 	}
-
 }

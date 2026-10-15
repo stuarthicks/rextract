@@ -8,6 +8,10 @@ This is nothing new, and can be achieved with many other tools such as Perl, Sed
 
 ## Install
 
+Nix:
+
+    nix run github:stuarthicks/rextract
+
 Using Homebrew:
 
     brew install stuarthicks/brews/rextract
